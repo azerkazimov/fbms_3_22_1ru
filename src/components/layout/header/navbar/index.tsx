@@ -13,6 +13,8 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import Profile from "@/components/shared/profile";
+import Sidebar from "@/components/shared/sidebar";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -119,7 +121,11 @@ export default function Navbar() {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-        
+
+        <div className="flex gap-2">
+          <Sidebar />
+          <Profile />
+        </div>
       </div>
     </div>
   );

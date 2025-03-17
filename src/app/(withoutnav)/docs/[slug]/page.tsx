@@ -6,7 +6,7 @@ interface DinamicPageProps {
   };
 }
 
-export default async function DinamicPage({ params }: DinamicPageProps) {
+export default function DinamicPage({ params }: DinamicPageProps) {
   const { slug } = params;
   return (
     <div className={parametr.container}>
