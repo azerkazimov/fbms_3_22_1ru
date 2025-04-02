@@ -14,6 +14,7 @@ import {
 import Profile from "@/components/shared/profile";
 import Sidebar from "@/components/shared/sidebar";
 import { NavbarProps } from "@/types/interfaces/navbar-props";
+import SearchDialog from "@/components/shared/search-dialog";
 // import { components } from "@/data/navbar/navbar";
 
 export default async function Navbar() {
@@ -89,6 +90,7 @@ export default async function Navbar() {
         </NavigationMenu>
 
         <div className="flex gap-2">
+          <SearchDialog/>
           <Sidebar />
           <Profile />
         </div>
