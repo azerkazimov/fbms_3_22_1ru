@@ -3,23 +3,36 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
+import Link from "next/link";
 
 export default function SignInForm() {
   return (
     <div className="flex min-h-screen items-center justify-center p-4">
       <Card className="w-full max-w-sm shadow-lg">
         <CardHeader>
-          <CardTitle className="text-center text-2xl font-bold">Sign In</CardTitle>
+          <CardTitle className="text-center text-2xl font-bold">
+            Sign In
+          </CardTitle>
         </CardHeader>
         <CardContent>
           <form className="space-y-4">
             <div>
               <Label htmlFor="email">Email</Label>
-              <Input id="email" type="email" placeholder="Enter your email" required />
+              <Input
+                id="email"
+                type="email"
+                placeholder="Enter your email"
+                required
+              />
             </div>
             <div>
               <Label htmlFor="password">Password</Label>
-              <Input id="password" type="password" placeholder="Enter your password" required />
+              <Input
+                id="password"
+                type="password"
+                placeholder="Enter your password"
+                required
+              />
             </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
@@ -30,9 +43,16 @@ export default function SignInForm() {
                 Forgot password?
               </a>
             </div>
-            <Button type="submit" className="w-full">
-              Sign In
-            </Button>
+            <div className="flex gap-4">
+              <Button type="submit" className="w-full">
+                Sign In
+              </Button>
+              <Link href="/" className="w-full">
+                <Button type="submit" >
+                  Main page
+                </Button>
+              </Link>
+            </div>
           </form>
         </CardContent>
       </Card>
